@@ -27,6 +27,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <nav className="flex">
+          <img src="/assets/shared/logo.svg" alt="bg-home" />
+        </nav>
         {children}
       </body>
     </html>
