@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <section className="container mx-auto grid grid-cols-12 gap-[1.875rem]">
+    <section className="container mx-auto my-32 grid grid-cols-12 gap-[1.875rem]">
       <div className="flex flex-col col-span-full">
         <div className="flex-1" />
         <div className="flex flex-row flex-1 justify-between">
