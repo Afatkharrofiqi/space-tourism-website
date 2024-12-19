@@ -7,6 +7,11 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    container: {
+      screens: {
+        xl: "1110px", // Change the container width for the xl breakpoint
+      },
+    },
     extend: {
       colors: {
         background: "var(--background)",
