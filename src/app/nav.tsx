@@ -32,11 +32,11 @@ const NavMenu = () => {
           ].map((item) => (
             <li
               key={item.id}
-              className={`flex h-full text-base tracking-[2px] cursor-pointer transition duration-300 ${
+              className={`flex h-full text-base tracking-[0.125rem] cursor-pointer transition duration-300 border-b-[0.1875rem] ${
                 pathName === item.href
-                  ? "border-b-2 border-white"
-                  : "border-b-2 border-transparent"
-              } hover:border-white/50`}
+                  ? "border-white"
+                  : "border-transparent hover:border-white/50"
+              }`}
             >
               <Link
                 href={item.href}
