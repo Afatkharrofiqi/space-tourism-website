@@ -85,13 +85,16 @@ export default function Crew() {
             <div id="pagination" className="flex gap-2 pb-12">
               <ul className="flex gap-10">
                 {crewData.map((v) => (
-                  <li
-                    key={v.id}
-                    className={`size-[0.9375rem] rounded-full cursor-pointer transition-all duration-200 ${
-                      activeCrew === v.id ? "bg-white" : "bg-white/20"
-                    }`}
-                    onClick={() => setActiveCrew(v.id)}
-                  />
+                  <li key={v.id}>
+                    <button
+                      className={`size-[0.9375rem] rounded-full cursor-pointer transition-all duration-200 ${
+                        activeCrew === v.id
+                          ? "bg-white"
+                          : "bg-white/20 hover:bg-white/50"
+                      }`}
+                      onClick={() => setActiveCrew(v.id)}
+                    />
+                  </li>
                 ))}
               </ul>
             </div>

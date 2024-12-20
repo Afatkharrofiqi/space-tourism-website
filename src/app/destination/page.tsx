@@ -79,16 +79,17 @@ export default function Destination() {
             <div className="flex flex-col w-[27.8125rem] gap-10 justify-start items-start">
               <ul className="flex flex-row gap-8 h-[2rem] w-full">
                 {destinationData.map((item) => (
-                  <li
-                    key={item.id}
-                    className={`font-normal text-base gap-8 leading-none uppercase tracking-[0.125rem] cursor-pointer transition duration-300 border-b-[0.1875rem] ${
-                      activeTab === item.id
-                        ? "border-white"
-                        : "border-transparent hover:border-white/50"
-                    }`}
-                    onClick={() => setActiveTab(item.id)}
-                  >
-                    {item.title}
+                  <li key={item.id} className="h-full">
+                    <button
+                      className={`font-normal text-base h-full gap-8 leading-none uppercase tracking-[0.125rem] cursor-pointer transition duration-300 border-b-[0.1875rem] ${
+                        activeTab === item.id
+                          ? "border-white"
+                          : "border-transparent hover:border-white/50"
+                      }`}
+                      onClick={() => setActiveTab(item.id)}
+                    >
+                      {item.title}
+                    </button>
                   </li>
                 ))}
               </ul>
