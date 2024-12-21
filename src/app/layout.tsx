@@ -53,7 +53,7 @@ export default function RootLayout({
         className={`${barlowCondensed.className} ${barlow.variable} ${bellefair.variable} ${geistSans.variable} ${geistMono.variable} antialiased min-h-svh max-w-screen bg-blue-900 flex flex-col overflow-hidden`}
       >
         <NavMenu />
-        <div className="flex gap-2 flex-1">{children}</div>
+        <main className="flex gap-2 flex-1">{children}</main>
       </body>
     </html>
   );

@@ -7,12 +7,12 @@ const NavMenu = () => {
   const pathName = usePathname();
 
   return (
-    <nav className="flex justify-between h-[8.5rem] pt-10 -space-x-8">
-      <div className="flex flex-1 pl-16 gap-16 items-center z-20">
+    <nav className="flex justify-between lg:pt-10 -space-x-8">
+      <div className="flex lg:flex-1 md:pl-10 md:pr-[4.5rem] lg:pr-0 lg:pl-16 gap-16 items-center z-20">
         <img src="/assets/shared/logo.svg" alt="bg-home" className="size-12" />
-        <div className="w-full h-[1px] bg-white/25"></div>
+        <div className="md:hidden lg:block w-full h-[1px] bg-white/25"></div>
       </div>
-      <div className="flex-1 justify-end px-16 flex bg-white/5 bg-blur backdrop-blur z-10">
+      <div className="flex-1 justify-end md:px-10 lg:px-16 flex bg-white/5 bg-blur backdrop-blur z-10">
         <ul className="flex flex-row gap-12 h-full items-center">
           {[
             { id: "home", label: "HOME", index: "00", href: "/" },
@@ -41,7 +41,7 @@ const NavMenu = () => {
               <Link
                 href={item.href}
                 passHref
-                className="flex gap-3 h-full items-center"
+                className="flex gap-3 h-[5.8125rem] items-center"
               >
                 <span className="font-bold">{item.index}</span>
                 {item.label}
