@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import { PluginAPI } from "tailwindcss/types/config";
 
 export default {
   content: [
@@ -19,5 +20,14 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addComponents }: PluginAPI) {
+      addComponents({
+        ".debug": {
+          border: "1px solid",
+          borderColor: "red",
+        },
+      });
+    },
+  ],
 } satisfies Config;
