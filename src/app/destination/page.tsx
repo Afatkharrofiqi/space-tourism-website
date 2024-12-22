@@ -82,7 +82,7 @@ export default function Destination() {
             role="contentinfo"
             className="col-span-1 flex justify-center items-center"
           >
-            <div className="flex flex-col w-[27.8125rem] gap-10 justify-start items-start">
+            <div className="flex flex-col md:max-w-[32.125rem] lg:max-w-[27.8125rem] md:gap-6 lg:gap-10 justify-start items-start">
               <ul className="flex flex-row gap-8 h-[2rem] w-full md:justify-center lg:justify-start">
                 {destinationData.map((item) => (
                   <li key={item.id} className="h-full">
@@ -102,13 +102,13 @@ export default function Destination() {
               <div role="textbox" className="flex flex-col gap-4">
                 <p
                   role="textbox"
-                  className="space-y-4 font-['Bellefair'] md:text-center lg:text-left md:text-[5rem] lg:text-[6.875rem] leading-none uppercase"
+                  className="space-y-4 font-['Bellefair'] md:text-center lg:text-left md:text-[5.75rem] lg:text-[6.875rem] leading-none uppercase"
                 >
                   {destination?.title}
                 </p>
                 <p
                   role="textbox"
-                  className="space-y-4 text-blue-300 font-['Barlow'] md:text-center lg:text-left md:text-base lg:text-[1.125rem] md:leading-[1.3595] lg:leading-[1.778] tracking-normal"
+                  className="space-y-4 text-blue-300 font-['Barlow'] md:text-center lg:text-left md:text-base lg:text-[1.125rem] md:leading-[1.8126] lg:leading-[1.778] tracking-normal"
                 >
                   {destination?.description}
                 </p>
@@ -141,7 +141,15 @@ export default function Destination() {
         src="/assets/destination/background-destination-desktop.jpg"
         alt="Background"
         fill
-        className="-z-10 object-cover"
+        className="-z-10 object-cover md:hidden lg:block"
+        priority
+      />
+
+      <Image
+        src="/assets/destination/background-destination-tablet.jpg"
+        alt="Background"
+        fill
+        className="-z-10 object-cover md:block lg:hidden"
         priority
       />
     </div>
