@@ -54,30 +54,36 @@ export default function Destination() {
     destinationData.find((v) => v.id === activeTab) || null;
 
   return (
-    <div className="container mx-auto my-12 grid grid-cols-12 gap-[1.875rem]">
+    <div className="container md:m-10 lg:mx-auto lg:my-12 grid grid-cols-12 gap-[1.875rem]">
       <div className="col-span-full h-full flex flex-col gap-6">
         <div role="heading" className="flex gap-6">
-          <span className="font-bold text-[1.75rem] tracking-[0.295rem] text-white/25 leading-[2.125rem]">
+          <span className="font-bold md:text-[1.25rem] md:tracking-[0.1018rem] md:leading-[1.5rem] lg:text-[1.75rem] lg:tracking-[0.295rem] text-white/25 lg:leading-[2.125rem]">
             01
           </span>
-          <p className="text-[1.75rem] tracking-[0.25rem] leading-[2.125rem]">
+          <p className="md:text-[1.25rem] md:tracking-[0.181525rem] md:leading-[1.5rem] lg:text-[1.75rem] lg:tracking-[0.25rem] lg:leading-[2.125rem]">
             PICK YOUR DESTINATION
           </p>
         </div>
-        <div role="contentinfo" className="flex-1 flex gap-8">
-          <div role="img" className="flex flex-1 justify-center items-center">
+        <div
+          role="contentinfo"
+          className="grid md:grid-cols-1 lg:grid-cols-2 flex-1 gap-8"
+        >
+          <div
+            role="img"
+            className="col-span-1 flex justify-center items-center"
+          >
             <img
               src={destination?.image}
               alt={destination?.title}
-              className="size-[30rem]"
+              className="md:size-[18.75rem] lg:size-[30rem]"
             />
           </div>
           <div
             role="contentinfo"
-            className="flex flex-1 justify-center items-center"
+            className="col-span-1 flex justify-center items-center"
           >
             <div className="flex flex-col w-[27.8125rem] gap-10 justify-start items-start">
-              <ul className="flex flex-row gap-8 h-[2rem] w-full">
+              <ul className="flex flex-row gap-8 h-[2rem] w-full md:justify-center lg:justify-start">
                 {destinationData.map((item) => (
                   <li key={item.id} className="h-full">
                     <button
@@ -96,13 +102,13 @@ export default function Destination() {
               <div role="textbox" className="flex flex-col gap-4">
                 <p
                   role="textbox"
-                  className="flex space-y-4 font-['Bellefair'] text-[6.875rem] leading-none uppercase"
+                  className="space-y-4 font-['Bellefair'] md:text-center lg:text-left md:text-[5rem] lg:text-[6.875rem] leading-none uppercase"
                 >
                   {destination?.title}
                 </p>
                 <p
                   role="textbox"
-                  className="flex space-y-4 text-blue-300 font-['Barlow'] text-[1.125rem] leading-[1.778] tracking-normal"
+                  className="space-y-4 text-blue-300 font-['Barlow'] md:text-center lg:text-left md:text-base lg:text-[1.125rem] md:leading-[1.3595] lg:leading-[1.778] tracking-normal"
                 >
                   {destination?.description}
                 </p>
@@ -110,18 +116,18 @@ export default function Destination() {
               <div className="h-[1px] w-full bg-white/25"></div>
               <div className="flex gap-6 w-full">
                 <div className="flex flex-col gap-3 flex-1">
-                  <p className="text-blue-300 text-[0.875rem] tracking-[0.125rem] leading-[1.0625rem]">
+                  <p className="text-blue-300 md:text-center lg:text-left text-[0.875rem] tracking-[0.125rem] leading-[1.0625rem]">
                     AVG. DISTANCE
                   </p>
-                  <p className="font-['Bellefair'] text-[1.75rem] leading-8 uppercase">
+                  <p className="font-['Bellefair'] md:text-center lg:text-left text-[1.75rem] leading-8 uppercase">
                     {destination?.distance}
                   </p>
                 </div>
                 <div className="flex flex-col gap-3 flex-1">
-                  <p className="text-blue-300 text-[0.875rem] tracking-[0.125rem] leading-[1.0625rem]">
+                  <p className="text-blue-300 md:text-center lg:text-left text-[0.875rem] tracking-[0.125rem] leading-[1.0625rem]">
                     EST. TRAVEL TIME
                   </p>
-                  <p className="font-['Bellefair'] text-[1.75rem] leading-8 uppercase">
+                  <p className="font-['Bellefair'] md:text-center lg:text-left text-[1.75rem] leading-8 uppercase">
                     {destination?.travelTime}
                   </p>
                 </div>
