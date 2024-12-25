@@ -25,7 +25,7 @@ export default function Home() {
           </div>
           <div className="col-span-1 md:mx-auto lg:mx-0 lg:max-w-[33.75rem] lg:w-full lg:place-content-end lg:place-self-end flex my-auto">
             <Link href={"/destination"} passHref>
-              <button className="group relative size-[17rem] bg-white rounded-full font-['Bellefair'] text-[2rem] text-blue-900">
+              <button className="group relative size-[17rem] bg-white rounded-full font-['Bellefair'] text-[2rem] text-blue-900 -z-[1]">
                 <span className="absolute inset-0 rounded-full bg-white group-hover:bg-white/10 group-hover:scale-150 transition-all duration-500"></span>
                 <span className="relative z-10">Explore</span>
               </button>

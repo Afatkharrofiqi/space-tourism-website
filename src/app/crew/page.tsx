@@ -96,11 +96,10 @@ export default function Crew() {
                 {crewData.map((v) => (
                   <li key={v.id}>
                     <button
-                      className={`md:size-[0.625rem] lg:size-[0.9375rem] rounded-full cursor-pointer transition-all duration-200 ${
-                        activeCrew === v.id
-                          ? "bg-white"
-                          : "bg-white/20 hover:bg-white/50"
-                      }`}
+                      className={`md:size-[0.625rem] lg:size-[0.9375rem] rounded-full cursor-pointer transition-all duration-200 ${activeCrew === v.id
+                        ? "bg-white"
+                        : "bg-white/20 hover:bg-white/50"
+                        }`}
                       onClick={() => setActiveCrew(v.id)}
                     />
                   </li>
@@ -112,7 +111,7 @@ export default function Crew() {
             role="img"
             className="flex flex-1 justify-center items-center relative"
           >
-            <div className="md:h-[35rem] lg:h-[42.25rem] relative">
+            <div className="md:h-[35rem] lg:h-[42.25rem] relative -z-[1]">
               <img
                 src={crew?.image}
                 alt={crew?.name}
