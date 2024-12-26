@@ -60,7 +60,7 @@ export default function Destination() {
           <span className="font-bold text-base leading-[1.1875rem] tracking-[0.25rem] md:text-[1.25rem] md:tracking-[0.1018rem] md:leading-[1.5rem] lg:text-[1.75rem] lg:tracking-[0.295rem] text-white/25 lg:leading-[2.125rem]">
             01
           </span>
-          <p className="text-base leading-[1.1875rem] tracking-[0.25rem] md:text-[1.25rem] md:tracking-[0.181525rem] md:leading-[1.5rem] lg:text-[1.75rem] lg:tracking-[0.25rem] lg:leading-[2.125rem]">
+          <p className="text-base text-white leading-[1.1875rem] tracking-[0.25rem] md:text-[1.25rem] md:tracking-[0.181525rem] md:leading-[1.5rem] lg:text-[1.75rem] lg:tracking-[0.25rem] lg:leading-[2.125rem]">
             PICK YOUR DESTINATION
           </p>
         </div>
@@ -87,7 +87,7 @@ export default function Destination() {
                 {destinationData.map((item) => (
                   <li key={item.id} className="h-full">
                     <button
-                      className={`font-normal text-base h-full gap-8 leading-none uppercase tracking-[0.125rem] cursor-pointer transition duration-300 border-b-[0.1875rem] ${activeTab === item.id
+                      className={`font-normal text-white text-base h-full gap-8 leading-none uppercase tracking-[0.125rem] cursor-pointer transition duration-300 border-b-[0.1875rem] ${activeTab === item.id
                         ? "border-white"
                         : "border-transparent hover:border-white/50"
                         }`}
@@ -101,7 +101,7 @@ export default function Destination() {
               <div role="textbox" className="flex flex-col gap-4 text-center md:text-left">
                 <p
                   role="textbox"
-                  className="space-y-4 font-['Bellefair'] text-[3.5rem] leading-[4rem] md:text-center lg:text-left md:text-[5.75rem] lg:text-[6.875rem] md:leading-none uppercase"
+                  className="space-y-4 text-white font-['Bellefair'] text-[3.5rem] leading-[4rem] md:text-center lg:text-left md:text-[5.75rem] lg:text-[6.875rem] md:leading-none uppercase"
                 >
                   {destination?.title}
                 </p>
@@ -118,7 +118,7 @@ export default function Destination() {
                   <p className="text-blue-300 md:text-center lg:text-left text-[0.875rem] tracking-[0.125rem] leading-[1.0625rem]">
                     AVG. DISTANCE
                   </p>
-                  <p className="font-['Bellefair'] md:text-center lg:text-left text-[1.75rem] leading-8 uppercase">
+                  <p className="text-white font-['Bellefair'] md:text-center lg:text-left text-[1.75rem] leading-8 uppercase">
                     {destination?.distance}
                   </p>
                 </div>
@@ -126,7 +126,7 @@ export default function Destination() {
                   <p className="text-blue-300 md:text-center lg:text-left text-[0.875rem] tracking-[0.125rem] leading-[1.0625rem]">
                     EST. TRAVEL TIME
                   </p>
-                  <p className="font-['Bellefair'] md:text-center lg:text-left text-[1.75rem] leading-8 uppercase">
+                  <p className="text-white font-['Bellefair'] md:text-center lg:text-left text-[1.75rem] leading-8 uppercase">
                     {destination?.travelTime}
                   </p>
                 </div>

@@ -51,7 +51,7 @@ export default function Technology() {
           <span className="font-bold text-base leading-[1.1875rem] tracking-[0.25rem] md:text-[1.25rem] md:tracking-[0.1018rem] md:leading-[1.5rem] lg:text-[1.75rem] lg:tracking-[0.295rem] text-white/25 lg:leading-[2.125rem]">
             03
           </span>
-          <p className="text-base leading-[1.1875rem] tracking-[0.25rem] md:text-[1.25rem] md:tracking-[0.181525rem] md:leading-[1.5rem] lg:text-[1.75rem] lg:tracking-[0.25rem] lg:leading-[2.125rem]">
+          <p className="text-base text-white leading-[1.1875rem] tracking-[0.25rem] md:text-[1.25rem] md:tracking-[0.181525rem] md:leading-[1.5rem] lg:text-[1.75rem] lg:tracking-[0.25rem] lg:leading-[2.125rem]">
             SPACE LAUNCH 101
           </p>
         </div>
@@ -80,7 +80,7 @@ export default function Technology() {
                 <p className="font-['Bellefair'] text-[1.125rem] leading-[1.3125rem] md:text-[1.5rem] md:text-center lg:text-left lg:text-[2rem] md:leading-[1.75rem] lg:leading-[2.3125rem] text-white/50 uppercase">
                   {data?.title}
                 </p>
-                <p className="font-['Bellefair'] md:text-center lg:text-left text-[2rem] leading-[1.75rem] md:text-[3.5rem] md:leading-[2.875rem] lg:leading-[4rem] uppercase">
+                <p className="font-['Bellefair'] text-white md:text-center lg:text-left text-[2rem] leading-[1.75rem] md:text-[3.5rem] md:leading-[2.875rem] lg:leading-[4rem] uppercase">
                   {data?.subTitle}
                 </p>
               </div>

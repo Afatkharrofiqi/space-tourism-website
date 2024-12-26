@@ -58,7 +58,7 @@ export default function Crew() {
           <span className="font-bold text-base leading-[1.1875rem] tracking-[0.25rem] md:text-[1.25rem] md:tracking-[0.1018rem] md:leading-[1.5rem] lg:text-[1.75rem] lg:tracking-[0.295rem] text-white/25 lg:leading-[2.125rem]">
             02
           </span>
-          <p className="text-base leading-[1.1875rem] tracking-[0.25rem] md:text-[1.25rem] md:tracking-[0.181525rem] md:leading-[1.5rem] lg:text-[1.75rem] lg:tracking-[0.25rem] lg:leading-[2.125rem]">
+          <p className="text-base text-white leading-[1.1875rem] tracking-[0.25rem] md:text-[1.25rem] md:tracking-[0.181525rem] md:leading-[1.5rem] lg:text-[1.75rem] lg:tracking-[0.25rem] lg:leading-[2.125rem]">
             MEET YOUR CREW
           </p>
         </div>
@@ -78,7 +78,7 @@ export default function Crew() {
                 <p className="font-['Bellefair'] text-[1.125rem] leading-[1.3125rem] md:text-center lg:text-left md:text-2xl lg:text-[2rem] md:leading-[1.1669] lg:leading-[2.3125rem] text-white/50 uppercase">
                   {crew?.rank}
                 </p>
-                <p className="font-['Bellefair'] text-[1.5rem] leading-[1.75rem] md:text-center lg:text-left md:text-[2.5rem] lg:text-[3.5rem] md:leading-[1.15] lg:leading-[4rem] uppercase">
+                <p className="font-['Bellefair'] text-white text-[1.5rem] leading-[1.75rem] md:text-center lg:text-left md:text-[2.5rem] lg:text-[3.5rem] md:leading-[1.15] lg:leading-[4rem] uppercase">
                   {crew?.name}
                 </p>
               </div>

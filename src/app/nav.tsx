@@ -60,7 +60,7 @@ const NavMenu = () => {
               <Link
                 href={item.link}
                 passHref
-                className="flex gap-3 text-base leading-[1.1875rem] md:h-[6rem] items-center tracking-[0.125rem]"
+                className="flex gap-3 text-base leading-[1.1875rem] md:h-[6rem] items-center tracking-[0.125rem] text-white"
               >
                 <span className="font-bold">{item.index}</span>
                 {item.label}
