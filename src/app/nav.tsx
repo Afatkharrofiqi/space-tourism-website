@@ -31,7 +31,7 @@ const listMenu: Menu[] = [
 
 const NavMenu = () => {
   const pathName = usePathname();
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   return (
     <nav className="flex justify-between p-6 md:p-0 lg:pt-10 md:-space-x-8">
@@ -44,7 +44,7 @@ const NavMenu = () => {
       </div>
       {/* Overlay */}
       {open && <div className="absolute cursor-pointer inset-0" onClick={() => setOpen(!open)} />}
-      <div className={`flex flex-col gap-12 md:gap-0 md:flex-row md:relative flex-1 md:justify-end md:px-10 lg:px-16 bg-white/5 bg-blur backdrop-blur-xl w-full absolute inset-y-0 right-0 md:inset-y-auto md:right-auto max-w-[calc(100%-7.5625rem)] pl-8 md:pl-0 z-10 md:translate-x-0 translate-x-full origin-right transition duration-300 ease-in-out ${open && "translate-x-0"}`}>
+      <div className={`flex flex-col gap-12 md:gap-0 md:flex-row md:relative flex-1 md:justify-end md:px-10 lg:px-16 bg-white/5 bg-blur backdrop-blur-xl w-full absolute inset-y-0 right-0 md:inset-y-auto md:right-auto max-w-[calc(100%-7.5625rem)] pl-8 md:pl-0 z-10 translate-x-0 md:translate-x-0 origin-right transition duration-300 ease-in-out ${!open && "translate-x-full"}`}>
         <div className="md:hidden py-8 flex flex-row justify-end pr-6">
           <X size={28} onClick={() => setOpen(!open)} className="cursor-pointer" />
         </div>

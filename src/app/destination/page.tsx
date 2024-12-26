@@ -54,13 +54,13 @@ export default function Destination() {
     destinationData.find((v) => v.id === activeTab) || null;
 
   return (
-    <div className="container md:m-10 lg:mx-auto lg:my-12 grid grid-cols-12 gap-[1.875rem]">
+    <div className="container p-6 gap-2 md:p-10 lg:mx-auto lg:py-12 grid grid-cols-12 md:gap-[1.875rem]">
       <div className="col-span-full h-full flex flex-col gap-6">
-        <div role="heading" className="flex gap-6">
-          <span className="font-bold md:text-[1.25rem] md:tracking-[0.1018rem] md:leading-[1.5rem] lg:text-[1.75rem] lg:tracking-[0.295rem] text-white/25 lg:leading-[2.125rem]">
+        <div role="heading" className="flex gap-6 justify-center md:justify-start">
+          <span className="font-bold text-base leading-[1.1875rem] tracking-[0.25rem] md:text-[1.25rem] md:tracking-[0.1018rem] md:leading-[1.5rem] lg:text-[1.75rem] lg:tracking-[0.295rem] text-white/25 lg:leading-[2.125rem]">
             01
           </span>
-          <p className="md:text-[1.25rem] md:tracking-[0.181525rem] md:leading-[1.5rem] lg:text-[1.75rem] lg:tracking-[0.25rem] lg:leading-[2.125rem]">
+          <p className="text-base leading-[1.1875rem] tracking-[0.25rem] md:text-[1.25rem] md:tracking-[0.181525rem] md:leading-[1.5rem] lg:text-[1.75rem] lg:tracking-[0.25rem] lg:leading-[2.125rem]">
             PICK YOUR DESTINATION
           </p>
         </div>
@@ -75,23 +75,22 @@ export default function Destination() {
             <img
               src={destination?.image}
               alt={destination?.title}
-              className="md:size-[18.75rem] lg:size-[30rem]"
+              className="size-[9.375rem] md:size-[18.75rem] lg:size-[30rem]"
             />
           </div>
           <div
             role="contentinfo"
-            className="col-span-1 flex justify-center items-center"
+            className="col-span-1 flex md:justify-center md:items-center"
           >
-            <div className="flex flex-col md:max-w-[32.125rem] lg:max-w-[27.8125rem] md:gap-6 lg:gap-10 justify-start items-start">
-              <ul className="flex flex-row gap-8 h-[2rem] w-full md:justify-center lg:justify-start">
+            <div className="flex flex-col md:max-w-[32.125rem] lg:max-w-[27.8125rem] gap-6 lg:gap-10 justify-start items-start">
+              <ul className="flex flex-row gap-8 h-[2rem] w-full justify-center lg:justify-start">
                 {destinationData.map((item) => (
                   <li key={item.id} className="h-full">
                     <button
-                      className={`font-normal text-base h-full gap-8 leading-none uppercase tracking-[0.125rem] cursor-pointer transition duration-300 border-b-[0.1875rem] ${
-                        activeTab === item.id
-                          ? "border-white"
-                          : "border-transparent hover:border-white/50"
-                      }`}
+                      className={`font-normal text-base h-full gap-8 leading-none uppercase tracking-[0.125rem] cursor-pointer transition duration-300 border-b-[0.1875rem] ${activeTab === item.id
+                        ? "border-white"
+                        : "border-transparent hover:border-white/50"
+                        }`}
                       onClick={() => setActiveTab(item.id)}
                     >
                       {item.title}
@@ -99,23 +98,23 @@ export default function Destination() {
                   </li>
                 ))}
               </ul>
-              <div role="textbox" className="flex flex-col gap-4">
+              <div role="textbox" className="flex flex-col gap-4 text-center md:text-left">
                 <p
                   role="textbox"
-                  className="space-y-4 font-['Bellefair'] md:text-center lg:text-left md:text-[5.75rem] lg:text-[6.875rem] leading-none uppercase"
+                  className="space-y-4 font-['Bellefair'] text-[3.5rem] leading-[4rem] md:text-center lg:text-left md:text-[5.75rem] lg:text-[6.875rem] md:leading-none uppercase"
                 >
                   {destination?.title}
                 </p>
                 <p
                   role="textbox"
-                  className="space-y-4 text-blue-300 font-['Barlow'] md:text-center lg:text-left md:text-base lg:text-[1.125rem] md:leading-[1.8126] lg:leading-[1.778] tracking-normal"
+                  className="space-y-4 text-blue-300 text-[0.9375rem] leading-[1.8] font-['Barlow'] md:text-center lg:text-left md:text-base lg:text-[1.125rem] md:leading-[1.8126] lg:leading-[1.778] tracking-normal"
                 >
                   {destination?.description}
                 </p>
               </div>
               <div className="h-[1px] w-full bg-white/25"></div>
-              <div className="flex gap-6 w-full">
-                <div className="flex flex-col gap-3 flex-1">
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-6 w-full">
+                <div className="flex flex-col gap-3 flex-1 text-center md:text-left">
                   <p className="text-blue-300 md:text-center lg:text-left text-[0.875rem] tracking-[0.125rem] leading-[1.0625rem]">
                     AVG. DISTANCE
                   </p>
@@ -123,7 +122,7 @@ export default function Destination() {
                     {destination?.distance}
                   </p>
                 </div>
-                <div className="flex flex-col gap-3 flex-1">
+                <div className="flex flex-col gap-3 flex-1 text-center md:text-left">
                   <p className="text-blue-300 md:text-center lg:text-left text-[0.875rem] tracking-[0.125rem] leading-[1.0625rem]">
                     EST. TRAVEL TIME
                   </p>
@@ -141,7 +140,7 @@ export default function Destination() {
         src="/assets/destination/background-destination-desktop.jpg"
         alt="Background"
         fill
-        className="-z-10 object-cover md:hidden lg:block"
+        className="-z-10 object-cover hidden md:hidden lg:block"
         priority
       />
 
@@ -149,7 +148,15 @@ export default function Destination() {
         src="/assets/destination/background-destination-tablet.jpg"
         alt="Background"
         fill
-        className="-z-10 object-cover md:block lg:hidden"
+        className="-z-10 object-cover hidden md:block lg:hidden"
+        priority
+      />
+
+      <Image
+        src="/assets/destination/background-destination-mobile.jpg"
+        alt="Background"
+        fill
+        className="-z-10 object-cover block md:hidden lg:hidden"
         priority
       />
     </div>

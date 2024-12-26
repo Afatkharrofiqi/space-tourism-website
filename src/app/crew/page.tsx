@@ -52,13 +52,13 @@ export default function Crew() {
   const crew: Crew | null = crewData.find((v) => v.id === activeCrew) || null;
 
   return (
-    <div className="container md:m-10 lg:mx-auto lg:my-12 grid grid-cols-12 md:gap-2 lg:gap-[1.875rem]">
+    <div className="container p-6 md:p-10 lg:mx-auto lg:py-12 grid grid-cols-12 md:gap-2 lg:gap-[1.875rem]">
       <div className="col-span-full h-full flex flex-col gap-6">
-        <div role="heading" className="flex gap-6">
-          <span className="font-bold md:text-[1.25rem] md:tracking-[0.1018rem] md:leading-[1.5rem] lg:text-[1.75rem] lg:tracking-[0.295rem] text-white/25 lg:leading-[2.125rem]">
+        <div role="heading" className="flex gap-6 justify-center md:justify-start">
+          <span className="font-bold text-base leading-[1.1875rem] tracking-[0.25rem] md:text-[1.25rem] md:tracking-[0.1018rem] md:leading-[1.5rem] lg:text-[1.75rem] lg:tracking-[0.295rem] text-white/25 lg:leading-[2.125rem]">
             02
           </span>
-          <p className="md:text-[1.25rem] md:tracking-[0.181525rem] md:leading-[1.5rem] lg:text-[1.75rem] lg:tracking-[0.25rem] lg:leading-[2.125rem]">
+          <p className="text-base leading-[1.1875rem] tracking-[0.25rem] md:text-[1.25rem] md:tracking-[0.181525rem] md:leading-[1.5rem] lg:text-[1.75rem] lg:tracking-[0.25rem] lg:leading-[2.125rem]">
             MEET YOUR CREW
           </p>
         </div>
@@ -68,35 +68,35 @@ export default function Crew() {
         >
           <div
             role="contentinfo"
-            className="flex flex-col md:mx-auto lg:mx-0 md:max-w-[32rem] lg:max-w-full flex-1 gap-10"
+            className="flex flex-col md:mx-auto lg:mx-0 md:max-w-[32rem] lg:max-w-full flex-1 gap-6 md:gap-10 pt-10 md:pt-0"
           >
             <div
               id="explanation"
-              className="flex flex-1 flex-col gap-6 justify-center"
+              className="flex flex-1 flex-col gap-6 justify-center text-center md:text-left"
             >
-              <div id="rank_and_name" className="flex flex-col gap-4">
-                <p className="font-['Bellefair'] md:text-center lg:text-left md:text-2xl lg:text-[2rem] md:leading-[1.1669] lg:leading-[2.3125rem] text-white/50 uppercase">
+              <div id="rank_and_name" className="flex flex-col gap-2 md:gap-4">
+                <p className="font-['Bellefair'] text-[1.125rem] leading-[1.3125rem] md:text-center lg:text-left md:text-2xl lg:text-[2rem] md:leading-[1.1669] lg:leading-[2.3125rem] text-white/50 uppercase">
                   {crew?.rank}
                 </p>
-                <p className="font-['Bellefair'] md:text-center lg:text-left md:text-[2.5rem] lg:text-[3.5rem] md:leading-[1.15] lg:leading-[4rem] uppercase">
+                <p className="font-['Bellefair'] text-[1.5rem] leading-[1.75rem] md:text-center lg:text-left md:text-[2.5rem] lg:text-[3.5rem] md:leading-[1.15] lg:leading-[4rem] uppercase">
                   {crew?.name}
                 </p>
               </div>
               <div id="description">
-                <p className="text-blue-200 font-['Barlow'] md:text-center lg:text-left md:text-base lg:text-[1.125rem] md:leading-[1.8129] lg:leading-[2rem]">
+                <p className="text-blue-200 text-[0.9375rem] leading-[180%] font-['Barlow'] md:text-center lg:text-left md:text-base lg:text-[1.125rem] md:leading-[1.8129] lg:leading-[2rem]">
                   {crew?.description}
                 </p>
               </div>
             </div>
             <div
               id="pagination"
-              className="flex gap-2 lg:pb-12 md:justify-center lg:justify-start"
+              className="flex gap-2 lg:pb-12 justify-center lg:justify-start"
             >
-              <ul className="flex gap-10">
+              <ul className="flex gap-4 lg:gap-10">
                 {crewData.map((v) => (
-                  <li key={v.id}>
+                  <li key={v.id} className="leading-[0] md:leading-normal">
                     <button
-                      className={`md:size-[0.625rem] lg:size-[0.9375rem] rounded-full cursor-pointer transition-all duration-200 ${activeCrew === v.id
+                      className={`size-[0.625rem] lg:size-[0.9375rem] rounded-full cursor-pointer transition-all duration-200 ${activeCrew === v.id
                         ? "bg-white"
                         : "bg-white/20 hover:bg-white/50"
                         }`}
@@ -111,7 +111,7 @@ export default function Crew() {
             role="img"
             className="flex flex-1 justify-center items-center relative"
           >
-            <div className="md:h-[35rem] lg:h-[42.25rem] relative -z-[1]">
+            <div className="h-[21.25rem] md:h-[35rem] lg:h-[42.25rem] relative -z-[1] aspect-[9/16] md:aspect-auto">
               <img
                 src={crew?.image}
                 alt={crew?.name}
@@ -128,7 +128,7 @@ export default function Crew() {
           src="/assets/crew/background-crew-desktop.jpg"
           alt="Background"
           fill
-          className="object-cover md:hidden lg:block"
+          className="object-cover hidden md:hidden lg:block"
           priority
         />
 
@@ -136,7 +136,15 @@ export default function Crew() {
           src="/assets/crew/background-crew-tablet.jpg"
           alt="Background"
           fill
-          className="object-cover md:block lg:hidden"
+          className="object-cover hidden md:block lg:hidden"
+          priority
+        />
+
+        <Image
+          src="/assets/crew/background-crew-mobile.jpg"
+          alt="Background"
+          fill
+          className="object-cover block md:hidden lg:hidden"
           priority
         />
         {/* Dark overlay */}
